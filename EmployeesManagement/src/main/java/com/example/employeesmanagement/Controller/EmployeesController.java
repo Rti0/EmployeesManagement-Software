@@ -46,7 +46,7 @@ public class EmployeesController {
 
     //Delete
     @DeleteMapping("/delete/{index}")
-    public ResponseEntity deleteEmployee(@Valid @RequestBody @PathVariable int index, Errors errors) {
+    public ResponseEntity deleteEmployee(@Valid @RequestBody @PathVariable int index,) {
         employee.remove(index);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse("Employee is deleted"));
     }
